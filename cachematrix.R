@@ -1,6 +1,7 @@
 ## Coursera Programming Assignment Week2:
 ## Check the end of the file to see the test run sequence.
 
+
 ## This function creates a special "matrix" object that can cache its inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
