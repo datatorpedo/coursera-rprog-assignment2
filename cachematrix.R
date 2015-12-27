@@ -60,7 +60,7 @@ cacheSolve <- function(x, ...) {
   data <- x$get()
   #we use solve to create the inverse matrix
   #no error handling needed, as we assume that the matrix is invertible
-  myMatrix <- solve(matrix, ...)
+  myMatrix <- solve(data, ...)
   x$setMatrix(myMatrix)
   myMatrix
 }
@@ -75,16 +75,16 @@ cacheSolve <- function(x, ...) {
 
 #> m$get()
 # OUTPUT:
-# [,1] [,2]
-# [1,]    2    3
-# [2,]    4    1
+#[,1] [,2]
+#[1,]    2    3
+#[2,]    4    1
 
 #first run without cache:
 #> cacheSolve(m)
 # OUTPUT:
-# [,1] [,2]
-# [1,]    2    3
-# [2,]    4    1
+#[,1] [,2]
+#[1,] -0.1  0.3
+#[2,]  0.4 -0.2
 
 
 #second run with cache:
